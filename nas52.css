@@ -1,0 +1,232 @@
+body {
+    background-color: #12120fe2;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image:url("Images/pexels-stephan-seeber-1054218.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* makes changes to the header of the page */
+.header {
+    background-color: #48718f;
+    padding: 10px;
+    text-align: center;
+    box-shadow: #48718f -5px 30px 40px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+
+.mainTitle {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 10px;
+    font-family: monospace;
+    color: white;
+}
+
+/* makes changes to the every h1 of the page */
+h1 {
+    font-family: monospace;
+    text-align: center;
+}
+
+
+.subtitle {
+    font-size: 1.4em;
+    text-align: center;
+    color: #1b1b18
+}
+
+/* makes changes to the the first section 'div' of the page */
+.sectionOne {
+    
+    padding: 80px;
+    margin: 20px;
+    box-shadow: #110f21f0 10px 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 170px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+    backdrop-filter: blur(4px);
+}
+
+/* makes changes to the section 2 'div' of the page */
+.sectionTwo {
+    box-shadow: #110f21f2 -10px 10px 20px;
+    padding: 20px;
+    margin: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    height: 250px;
+    width: 50%;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    transform: translate(-50%);
+    backdrop-filter: blur(4px);
+}
+
+/* makes changes to every button of the page */
+button{
+    background-color: #1b1b18e2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 7px;
+    box-shadow: #33333380 1px 1px 20px;
+}
+
+/* makes the buttons have a color change when u hover and click on it */
+button:hover {
+    background-color: #343434e2;
+}
+
+button:active {
+    background-color: #1b1b18e2;
+}
+
+/* this are the radio buttons */
+.radioBtn {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+/* this is the input field for the numbers */
+.guessField {
+    background-color: #f6f6f6;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    height: 3px;
+    box-shadow: #33333380 1px 1px 20px;
+    margin-right: 5px;
+}
+
+/* Guessing record div */
+.userGuesse{
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    margin: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    width: 15.9%;
+    height: 250px;
+    position: absolute;
+    top: 25%;
+    left: 75.3%;
+    transform: translate(-50%);
+    z-index: 1;
+    box-shadow: #110f21f2 10px 10px 20px;
+
+}
+
+/* makes changes to both dialog boxes */
+.dialog, .dialogLost {
+    width: 300px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+    z-index: 1;
+    font-size: large;
+    text-align: center;
+    box-shadow: #33333380 1px 1px 20px;
+    backdrop-filter: blur(4px);
+    background-color: none;
+    
+}
+
+
+/* button on the losing dialog box */
+.closeBtn2 {
+    margin-top: -20px;
+    width: 150px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* button on the winning dialog box */
+.closeBtn1 {
+    margin-top: 20px;
+    width: 150px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+/* this is the message that only gets displayed when the user does not select any range */
+.selectionMsg {
+    font-style: italic;
+}
+
+li {
+    list-style: none;
+}
+
+/* this is the 'p' object on the guessing record */
+.guessingRecord {
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* thi is the footer section at the bottom of the page */
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b18e2;
+    text-align: center;
+    padding: 10px;
+    box-shadow: #1b1b18de -3px -30px 30px;
+    color: white;
+    z-index: 3;
+    position: fixed;
+}
+
+/* this is the bit o text that updates the user on how many guesses he has left */
+.guessesLeft {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px;
+    padding-top: 5%;
+    font-family: monospace;
+}
+
+/* this is the 'h1' message which gives instructions to the user in the 1st page */
+.instruction {
+    font-size: 1.2em;
+    text-align: center;
+    padding-top: 9%;
+    font-family: monospace;
+}
+
+

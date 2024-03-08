@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="nas52.css">
+</head>
+<body background="Images/pexels-stephan-seeber-1054218.jpg">
+
+    <!-- Div containing the header contents -->
+<div class="header">
+<h1 class="mainTitle">Guess The Number Game</h1>
+</div>
+
+    <!-- This displays the instructions on the first part of the page -->
+<h2 id="instruction" class="instruction">In this game you will have to guess a number randomly generated <br> from 1 up to the range selected.</h2>
+
+
+    <!-- This is the first section which the user is oing to interact with. it contains a subtitle, 
+        the 3 radio buttons for the range selection, and the start button -->
+<div class="sectionOne" id="sectionOne">
+    <h1 class="subtitle">Select a range of numbers</h1>
+    <input class="radioBtn10" type="radio" name="range" value="10" onclick="selectedRange10()"> 10
+    <input class="radioBtn100" type="radio" name="range" value="100" onclick="selectedRange100()"> 100
+    <input class="radioBtn1000" type="radio" name="range" value="1000" onclick="selectedRange1000()"> 1000
+    <br>
+    <button class="startBtn" type="submit" value="Start" onclick="startGame()">Start</button>
+    <p class="selectionMsg" id="selectionMsg">Please select a range before starting the game!</p>
+</div>
+
+
+    <!-- This is the second section which is going to be displayed once the user selects the range and presses
+        'start'. it contains a subtitle, the input field for the user, the 'check' button as well as messages 
+        that will help the user on guessing the number  -->
+<div class="sectionTwo" id="sectionTwo">
+    <h1 class="subtitle">Guess a number between 1 and <a id="selectedRange">Selected value</a>:</h1>
+    <input type="number" id="guessField" class="guessField" placeholder="Enter a number...">
+    <button id="checkBtn"class="checkBtn" type="submit" value="Check" onclick="checkGuess()" onkeydown="enter" onkeypress="enter">Check</button>
+    <br>
+    <p id="message">Have a guess!</p>
+    <p class="guessesLeft">Number of guesses Left: <a id="guessesLeft"> 0</a></p>
+</div>
+
+    <!-- This is where the user guesses are going to be displayed -->
+<ul class="userGuesse" id="userGuessesDisplayed">
+    <p class="guessingRecord">Guessing Record!</p>
+</ul>
+
+    <!-- This is the dialog that is going to appear if the user guesses the number -->
+<dialog id="dialog" class="dialog" open="">Congratulations!
+    <br>
+    <button class="closeBtn1" onclick="playAgain()">Play Again!</button>
+</dialog>
+
+    <!-- This is the dialog that is going to appear if the user does not guess the number -->
+<dialog id="dialogLost" class="dialogLost" open=""> <p id="randomNumberDisplay" class="randomNumberDisplay"></p>
+    <br>
+    <button class="closeBtn2" onclick="playAgain()">Play Again!</button>
+</dialog>
+
+    <!-- Contains the footer and a paragraph -->
+<footer>
+    <p>Created by Nik Stefan for COMP3230 at University of Kent on 2023 / 2024</p>
+</footer>
+
+
+    <script src="nas52.js"></script>
+</body>
+</html>
